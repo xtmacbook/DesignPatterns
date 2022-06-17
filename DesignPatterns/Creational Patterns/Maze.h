@@ -62,3 +62,9 @@ public:
 private:
 
 };
+
+class MazeGame
+{
+public:
+    Maze* CreateMaze();
+};
