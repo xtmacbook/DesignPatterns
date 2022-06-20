@@ -139,10 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Creational Patterns\Abstract Factory.cpp" />
+    <ClCompile Include="Creational Patterns\Builder.cpp" />
     <ClCompile Include="Creational Patterns\Maze.cpp" />
     <ClCompile Include="DesignPatterns.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Creational Patterns\Abstract Factory.h" />
+    <ClInclude Include="Creational Patterns\Builder.h" />
     <ClInclude Include="Creational Patterns\Maze.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

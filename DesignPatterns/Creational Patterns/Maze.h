@@ -68,3 +68,5 @@ class MazeGame
 public:
     Maze* CreateMaze();
 };
+
+class Spell;
