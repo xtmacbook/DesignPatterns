@@ -141,13 +141,19 @@
   <ItemGroup>
     <ClCompile Include="Creational Patterns\Abstract Factory.cpp" />
     <ClCompile Include="Creational Patterns\Builder.cpp" />
+    <ClCompile Include="Creational Patterns\Factory.cpp" />
     <ClCompile Include="Creational Patterns\Maze.cpp" />
+    <ClCompile Include="Creational Patterns\Prototype.cpp" />
+    <ClCompile Include="Creational Patterns\Singleton.cpp" />
     <ClCompile Include="DesignPatterns.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Creational Patterns\Abstract Factory.h" />
     <ClInclude Include="Creational Patterns\Builder.h" />
+    <ClInclude Include="Creational Patterns\Factory.h" />
     <ClInclude Include="Creational Patterns\Maze.h" />
+    <ClInclude Include="Creational Patterns\Prototype.h" />
+    <ClInclude Include="Creational Patterns\Singleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

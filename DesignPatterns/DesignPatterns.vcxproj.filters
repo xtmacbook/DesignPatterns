@@ -30,6 +30,15 @@
     <ClCompile Include="Creational Patterns\Builder.cpp">
       <Filter>源文件\Creational Patterns</Filter>
     </ClCompile>
+    <ClCompile Include="Creational Patterns\Factory.cpp">
+      <Filter>源文件\Creational Patterns</Filter>
+    </ClCompile>
+    <ClCompile Include="Creational Patterns\Prototype.cpp">
+      <Filter>源文件\Creational Patterns</Filter>
+    </ClCompile>
+    <ClCompile Include="Creational Patterns\Singleton.cpp">
+      <Filter>源文件\Creational Patterns</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Creational Patterns\Maze.h">
@@ -39,6 +48,15 @@
       <Filter>源文件\Creational Patterns</Filter>
     </ClInclude>
     <ClInclude Include="Creational Patterns\Builder.h">
+      <Filter>源文件\Creational Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="Creational Patterns\Factory.h">
+      <Filter>源文件\Creational Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="Creational Patterns\Prototype.h">
+      <Filter>源文件\Creational Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="Creational Patterns\Singleton.h">
       <Filter>源文件\Creational Patterns</Filter>
     </ClInclude>
   </ItemGroup>
