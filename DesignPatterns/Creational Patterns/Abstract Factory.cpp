@@ -22,9 +22,18 @@ Room* MazeFactory::MakeRoom(int n) const
 
 Door* MazeFactory::MakeDoor(Room* r1, Room* r2) const
 {
-    return new Door(r1, r2);
+    auto* PDoor =  new Door;
+    PDoor->Initialize(r1, r2);
+    return PDoor;
 }
 
+/*
+ If CreateMaze is passed an object as a parameter to use to create rooms,
+walls, and doors, then you can change the classes of rooms, walls, and doors
+by passing a different parameter. This is an example of the Abstract Factory
+(99) pattern.
+
+*/
 
 Maze* CreateMaze_AbstractFactory(MazeFactory& factory)
 {

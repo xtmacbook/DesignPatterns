@@ -17,14 +17,20 @@ void MazeBuilder::BuildDoor(int roomFrom, int roomTo)
 
 Maze* MazeBuilder::GetMaze()
 {
-
+    return nullptr;
 }
 
 MazeBuilder::MazeBuilder()
 {
 
 }
+/*
+If CreateMaze is passed an object that can create a new maze in its entirety
+using operations for adding rooms, doors, and walls to the maze it builds,
+then you can use inheritance to change parts of the maze or the way the maze
+is built. This is an example of the Builder (110) pattern.
 
+*/
 Maze* CreateMaze_Builder(MazeBuilder&builder)
 {
     builder.BuildMaze();
@@ -63,7 +69,8 @@ void StandardMazeBuilder::BuildDoor(int n1, int n2)
 {
     Room* r1 = currentMaze_->RoomNo(n1);
     Room* r2 = currentMaze_->RoomNo(n2);
-    Door* d = new Door(r1, r2);
+    Door* d = new Door;
+    d->Initialize(r1, r2);
 
     r1->SetSide(CommonWall(r1, r2), d);
     r2->SetSide(CommonWall(r2, r1), d);
@@ -76,5 +83,5 @@ Maze* StandardMazeBuilder::GetMaze()
 
 Direction StandardMazeBuilder::CommonWall(Room*, Room*)
 {
-
+    return Direction::East;
 }

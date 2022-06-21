@@ -16,7 +16,11 @@ public:
 class Room : public MapSite
 {
 public:
+    Room();
     Room(int rootNo);
+    Room(const Room&);
+
+    virtual Room* Clone()const;
 
     MapSite* GetSide(Direction)const;
 
@@ -33,6 +37,9 @@ class Wall : public MapSite
 {
 public:
     Wall();
+    Wall(const Wall&);
+
+    virtual Wall* Clone()const;
 
     virtual void Enter();
 };
@@ -40,7 +47,12 @@ public:
 class Door : public MapSite
 {
 public:
-    Door(Room* = nullptr,Room* = nullptr);
+    Door() = default;
+
+    Door(const Door&);
+
+    virtual void Initialize(Room*, Room*);
+    virtual Door* Clone()const;
 
     virtual void Enter();
     Room* OtherSideFrom(Room*);
@@ -52,10 +64,23 @@ private:
     bool isOpen_;
 };
 
+class BombedWall : public Wall {
+public:
+    BombedWall();
+    BombedWall(const BombedWall&);
+
+    virtual Wall* Clone() const;
+    bool HasBomb();
+private:
+    bool bomb_;
+};
+
 class Maze
 {
 public:
     Maze();
+    Maze(const Maze&);
+    virtual Maze* Clone()const;
     void AddRoom(Room*);
     Room* RoomNo(int)const;
 
